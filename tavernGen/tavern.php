@@ -18,21 +18,30 @@
 <body>
 <?php
 
+include 'php/tavernName.php';
+include 'php/tavernImage.php';
 
+$background = 0;
+$tavernImageFront = getTavernTop($background);
 
 
 
 ?>
 
-<img id="character_sheet"/>
+<img src= "images/tavern1.png" id="tavernBackground">
+
+<img src='<?php echo $tavernImageFront ?>' id="tavernTop">
+
+<!--
+<img id="tavernBackground"/>
 
 <script>
     
     let imgData = "images/tavern1.png";
       
-      $("#character_sheet").attr("src", imgData);
+      $("#tavernBackground").attr("src", imgData);
 
-</script>
+</script>-->
 
 </body>
 </html>

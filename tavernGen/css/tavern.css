@@ -1,6 +1,10 @@
-#character_sheet{
-    width: 950px;
-    height: auto;
-	display: block;
+#tavernBackground{
+    top: 0px;
+    left: 0px;
 }
 
+#tavernTop{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
