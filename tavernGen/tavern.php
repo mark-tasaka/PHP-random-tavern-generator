@@ -21,27 +21,15 @@
 include 'php/tavernName.php';
 include 'php/tavernImage.php';
 
-$background = 0;
-$tavernImageFront = getTavernTop($background);
+$tavernImage = getTavern();
 
 
 
 ?>
 
-<img src= "images/tavern1.png" id="tavernBackground">
 
-<img src='<?php echo $tavernImageFront ?>' id="tavernTop">
+<img src='<?php echo $tavernImage ?>' id="tavernBackground">
 
-<!--
-<img id="tavernBackground"/>
-
-<script>
-    
-    let imgData = "images/tavern1.png";
-      
-      $("#tavernBackground").attr("src", imgData);
-
-</script>-->
 
 </body>
 </html>
