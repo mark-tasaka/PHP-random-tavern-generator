@@ -29,6 +29,30 @@ function getTavern()
             case 5:
                 return 'images/tavern5.png';
             break;
+            
+            case 6:
+                return 'images/tavern6.png';
+            break;
+
+            case 7:
+                return 'images/tavern7.png';
+            break;
+
+            case 8:
+                return 'images/tavern8.png';
+            break;
+
+            case 9:
+                return 'images/tavern9.png';
+            break;
+
+            case 10:
+                return 'images/tavern10.png';
+            break;
+
+            case 11:
+                return 'images/tavern11.png';
+            break;
 
             default:
             return ' ';
