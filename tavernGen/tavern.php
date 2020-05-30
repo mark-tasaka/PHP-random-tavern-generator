@@ -20,10 +20,18 @@
 
 include 'php/tavernName.php';
 include 'php/tavernImage.php';
+include 'php/tavernDescription.php';
 
 $tavernImage = getTavernImage();
 
 $tavernName = getTavernName();
+
+$storeys = storeys();
+$outerWalls = buildingConstruct();
+$theFloor = floorDescr();
+$theRoof = roofDesc();
+$innerDescr1 = roomDescr1();
+$innerDescr2 = roomDescr2();
 
 
 
@@ -32,6 +40,12 @@ $tavernName = getTavernName();
 <span id="tavernName">
            <?php
            echo $tavernName;
+           ?>
+       </span>
+       
+<span id="tavernDescription">
+           <?php
+           echo $tavernName . ' is a ' . $storeys . ' ' . $outerWalls . ', with ' . $theFloor . ' and ' . $theRoof . '. ' . $innerDescr1 . ' and ' . $innerDescr2;
            ?>
        </span>
        

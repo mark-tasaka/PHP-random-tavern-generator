@@ -16,4 +16,12 @@ body{
 	font-weight: bold;
 }
 
+#tavernDescription{
+    position: absolute;
+    top: 70px;
+    left: 30px;
+    font-size: 0.75em;
+    width: 280px;
+}
+
 
