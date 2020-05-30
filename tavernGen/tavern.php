@@ -21,11 +21,20 @@
 include 'php/tavernName.php';
 include 'php/tavernImage.php';
 
-$tavernImage = getTavern();
+$tavernImage = getTavernImage();
+
+$tavernName = getTavernName();
 
 
 
 ?>
+
+<span id="tavernName">
+           <?php
+           echo $tavernName;
+           ?>
+       </span>
+       
 
 
 <img src='<?php echo $tavernImage ?>' id="tavernBackground">

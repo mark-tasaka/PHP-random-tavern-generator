@@ -1,8 +1,8 @@
 <?php
 
-function getTavern()
+function getTavernImage()
 {
-    $number = rand(0,5);
+    $number = rand(0,11);
 
     switch($number)
     {
@@ -57,6 +57,7 @@ function getTavern()
             default:
             return ' ';
      }
+
 }
 
 
