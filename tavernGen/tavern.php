@@ -21,6 +21,7 @@
 include 'php/tavernName.php';
 include 'php/tavernImage.php';
 include 'php/tavernDescription.php';
+include 'php/randomNames.php';
 
 $tavernImage = getTavernImage();
 
@@ -32,6 +33,9 @@ $theFloor = floorDescr();
 $theRoof = roofDesc();
 $innerDescr1 = roomDescr1();
 $innerDescr2 = roomDescr2();
+$tavernStoreys = tavernStorey($storeys);
+$acoommadations1 = accommodationDescr1();
+$acoommadations2 = accommodationDescr2();
 
 
 
@@ -46,6 +50,7 @@ $innerDescr2 = roomDescr2();
 <span id="tavernDescription">
            <?php
            echo $tavernName . ' is a ' . $storeys . ' ' . $outerWalls . ', with ' . $theFloor . ' and ' . $theRoof . '. ' . $innerDescr1 . ' and ' . $innerDescr2;
+           echo 'The accommodations on the ' . $tavernStoreys . ' consists of ' . $acoommadations1 . $acoommadations2;
            ?>
        </span>
        

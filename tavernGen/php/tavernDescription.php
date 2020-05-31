@@ -37,7 +37,7 @@ function buildingConstruct ()
         break;
 
         case 4:
-             return 'simple wooden building';
+             return 'simple wood building';
         break;
              
         case 5:
@@ -187,5 +187,86 @@ function roomDescr2()
     }
 
 }
+
+
+function tavernStorey($storeys)
+{
+    if($storeys == 'two-storey')
+    {
+        return 'second storey';
+    }
+    else
+    {
+        return 'second and third storeys';
+    }
+
+}
+
+function accommodationDescr1()
+{
+    $choice = rand(0,4);
+
+    switch($choice)
+    {
+        case 0:
+            return 'small rooms, with two plain wood framed beds in each room';
+        break;
+
+        case 1:
+            return 'comfortable rooms, with a pair of fancy oak framed beds in each room';
+        break;
+
+        case 2:
+            return 'consists of small rooms, with a pair of simple, yet sturdy, wood framed beds in each room';
+        break;
+
+        case 3:
+            return 'spacious rooms, with four simple wood framed beds in each room';
+        break;
+
+        case 4:
+            return 'small, yet comfortable rooms, with a pair of sturdy oak framed beds in each room';
+        break;
+
+        default:
+        return '';
+    }
+
+}
+
+
+function accommodationDescr2()
+{
+    $choice = rand(0,4);
+
+    switch($choice)
+    {
+        case 0:
+            return '; faded velvet sheets, made from old curtains, covers each bed.';
+        break;
+
+        case 1:
+            return '; covering each bed are moth eaten wool blankets and cloth covered pillows.';
+        break;
+
+        case 2:
+            return '; brightly coloured quilts and comfortable pillows covers each bed.';
+        break;
+
+        case 3:
+            return '; warm wool blankets and cloth covered pillows rests upon each bed.';
+        break;
+
+        case 4:
+            return '; warm cloth sheets and a pair of comfortable pillows covers each bed.';
+        break;
+
+        default:
+        return '';
+    }
+
+}
+
+
 
 ?>

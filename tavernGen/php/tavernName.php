@@ -84,7 +84,7 @@ function tavernName2()
                 'Reveling Wench', 
                 'Salt Merchant', 
                 'Shaken Flagon', 
-                'Shield and Sheath', 
+                'Sword and Shield', 
                 'Stowaway', 
                 'Tanger Serpent', 
                 'Wanderlust', 
