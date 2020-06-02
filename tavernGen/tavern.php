@@ -22,6 +22,8 @@ include 'php/tavernName.php';
 include 'php/tavernImage.php';
 include 'php/tavernDescription.php';
 include 'php/randomNames.php';
+include 'php/gender.php';
+include 'php/species.php';
 
 $tavernImage = getTavernImage();
 
