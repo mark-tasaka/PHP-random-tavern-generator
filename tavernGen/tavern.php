@@ -39,6 +39,10 @@ $tavernStoreys = tavernStorey($storeys);
 $acoommadations1 = accommodationDescr1();
 $acoommadations2 = accommodationDescr2();
 
+$innkeeperGender = getRandomSex1();
+$innkeeperSpecies = getSpecies();
+$innkeeperName = getFirstName ($innkeeperGender, $innkeeperSpecies) . ' ' . getSurnameName ($innkeeperSpecies);
+
 
 
 ?>
@@ -53,6 +57,7 @@ $acoommadations2 = accommodationDescr2();
            <?php
            echo $tavernName . ' is a ' . $storeys . ' ' . $outerWalls . ', with ' . $theFloor . ' and ' . $theRoof . '. ' . $innerDescr1 . ' and ' . $innerDescr2;
            echo 'The accommodations on the ' . $tavernStoreys . ' consists of ' . $acoommadations1 . $acoommadations2;
+           echo '<br/><br/><span class="bold">Innkeeper: </span>' . $innkeeperName . " (" . $innkeeperSpecies . ' ' . $innkeeperGender . ')';
            ?>
        </span>
        

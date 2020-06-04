@@ -813,6 +813,62 @@ function getHumanName ($sex)
 }
 
 
+function getFirstName ($sex, $species)
+{
+    if($species == 'Human')
+    {
+        $firstName = getHumanName($sex);
+        return $firstName;
+    }
+    
+    if($species == 'Dwarf')
+    {
+        $firstName = getDwarfName($sex);
+        return $firstName;
+    }
+    
+    if($species == 'Elf')
+    {
+        $firstName = getElfName($sex);
+        return $firstName;
+    }
+    
+    if($species == 'Halfling')
+    {
+        $firstName = getHalflingName($sex);
+        return $firstName;
+    }
+
+}
+
+
+function getSurnameName ($species)
+{
+    if($species == 'Human')
+    {
+        $lastName = getHumanSurname();
+        return $lastName;
+    }
+    
+    if($species == 'Dwarf')
+    {
+        $lastName = getDwarfSurname();
+        return $lastName;
+    }
+    
+    if($species == 'Elf')
+    {
+        $lastName = getElfSurname();
+        return $lastName;
+    }
+    
+    if($species == 'Halfling')
+    {
+        $lastName = getHalflingSurname();
+        return $lastName;
+    }
+
+}
 
 
 ?>
