@@ -25,6 +25,14 @@ include 'php/randomNames.php';
 include 'php/gender.php';
 include 'php/species.php';
 
+
+
+if(isset($_POST["theRuleSet"]))
+{
+    $ruleSet = $_POST["theRuleSet"];
+
+}
+
 $tavernImage = getTavernImage();
 
 $tavernName = getTavernName();
