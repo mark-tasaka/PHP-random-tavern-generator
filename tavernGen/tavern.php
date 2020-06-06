@@ -24,6 +24,9 @@ include 'php/tavernDescription.php';
 include 'php/randomNames.php';
 include 'php/gender.php';
 include 'php/species.php';
+include 'php/npcStatistics.php';
+include 'php/npcDescription.php';
+include 'php/npcAge.php';
 
 
 
@@ -50,6 +53,20 @@ $acoommadations2 = accommodationDescr2();
 $innkeeperGender = getRandomSex1();
 $innkeeperSpecies = getSpecies();
 $innkeeperName = getFirstName ($innkeeperGender, $innkeeperSpecies) . ' ' . getSurnameName ($innkeeperSpecies);
+$innkeeperStats = innKeeperStats($ruleSet);
+$innkeeperHP = innKeeperHitPoints($ruleSet);
+$innkeeperStat = statLine ($ruleSet, $innkeeperStats, $innkeeperHP);
+$innkeeperAge = npcAgeCategory();
+$innkeeperAgeCat = ageDescription($innkeeperAge, $innkeeperSpecies, $innkeeperGender);
+
+$bartenderGender = getRandomSex1();
+$bartenderSpecies = getSpecies();
+$bartenderName = getFirstName ($bartenderGender, $bartenderSpecies) . ' ' . getSurnameName ($bartenderSpecies);
+$bartenderStats = innKeeperStats($ruleSet);
+$bartenderHP = innKeeperHitPoints($ruleSet);
+$bartenderStat = statLine ($ruleSet, $bartenderStats, $bartenderHP);
+$bartenderAge = npcAgeCategory();
+$bartenderAgeCat = ageDescription($bartenderAge, $bartenderSpecies, $bartenderGender);
 
 
 
@@ -65,7 +82,14 @@ $innkeeperName = getFirstName ($innkeeperGender, $innkeeperSpecies) . ' ' . getS
            <?php
            echo $tavernName . ' is a ' . $storeys . ' ' . $outerWalls . ', with ' . $theFloor . ' and ' . $theRoof . '. ' . $innerDescr1 . ' and ' . $innerDescr2;
            echo 'The accommodations on the ' . $tavernStoreys . ' consists of ' . $acoommadations1 . $acoommadations2;
+           echo '<br/><br/><span class="bold">Tavern Staff: </span>';
            echo '<br/><br/><span class="bold">Innkeeper: </span>' . $innkeeperName . " (" . $innkeeperSpecies . ' ' . $innkeeperGender . ')';
+           echo '<br/>' . $innkeeperStat;
+           echo '<br/>' . $innkeeperName . ' is a '. $innkeeperAgeCat;
+
+           echo '<br/><br/><span class="bold">Bartender: </span>' . $bartenderName . " (" . $bartenderSpecies . ' ' . $bartenderGender . ')';
+           echo '<br/>' . $bartenderStat;
+           echo '<br/>' . $bartenderName . ' is a '. $bartenderAgeCat;
            ?>
        </span>
        

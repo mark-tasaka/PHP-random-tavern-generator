@@ -11,7 +11,7 @@ body{
 #tavernName{
     position: absolute;
     top: 40px;
-    left: 30px;
+    left: 25px;
     font-size: 1em;
 	font-weight: bold;
 }
@@ -19,13 +19,14 @@ body{
 #tavernDescription{
     position: absolute;
     top: 70px;
-    left: 30px;
+    left: 25px;
     font-size: 0.75em;
-    width: 280px;
+    width: 285px;
 }
 
 .bold{
     font-weight: bold;
 }
+
 
 

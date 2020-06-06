@@ -290,7 +290,7 @@ function getHalflingSurname()
         
     $numberNames = count($surnames);
     
-    $randomName = rand (0, ($numberNames) );
+    $randomName = rand (0, ($numberNames -1) );
     
     return $surnames[$randomName];
 }
@@ -333,7 +333,7 @@ function getHalflingName ($sex)
         
         $numberNames = count($femaleNames);
         
-        $randomName = rand (0, ($numberNames) );
+        $randomName = rand (0, ($numberNames -1) );
         
         return $femaleNames[$randomName];
         
@@ -368,7 +368,7 @@ function getHalflingName ($sex)
         
         $numberNames = count($maleNames);
         
-        $randomName = rand (0, ($numberNames) );
+        $randomName = rand (0, ($numberNames -1) );
         
         return $maleNames[$randomName];
     }
