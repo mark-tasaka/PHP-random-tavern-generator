@@ -85,11 +85,11 @@ $bartenderAgeCat = ageDescription($bartenderAge, $bartenderSpecies, $bartenderGe
            echo '<br/><br/><span class="bold">Tavern Staff: </span>';
            echo '<br/><br/><span class="bold">Innkeeper: </span>' . $innkeeperName . " (" . $innkeeperSpecies . ' ' . $innkeeperGender . ')';
            echo '<br/>' . $innkeeperStat;
-           echo '<br/>' . $innkeeperName . ' is a '. $innkeeperAgeCat;
+           echo '<br/>' . $innkeeperName . ' is '. $innkeeperAgeCat;
 
            echo '<br/><br/><span class="bold">Bartender: </span>' . $bartenderName . " (" . $bartenderSpecies . ' ' . $bartenderGender . ')';
            echo '<br/>' . $bartenderStat;
-           echo '<br/>' . $bartenderName . ' is a '. $bartenderAgeCat;
+           echo '<br/>' . $bartenderName . ' is '. $bartenderAgeCat;
            ?>
        </span>
        

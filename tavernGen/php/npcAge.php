@@ -43,27 +43,27 @@ function dwarfAge($category)
     switch($category)
     {
         case 1:
-            $age = 'young dwarf';
+            $age = 'a young dwarf';
             return $age;
         break;
         
         case 2:
-            $age = 'adult dwarf';
+            $age = 'an adult dwarf';
             return $age;
         break;
         
         case 3:
-            $age = 'middle age dwarf';
+            $age = 'a middle age dwarf';
             return $age;
         break;
         
         case 4:
-            $age = 'older dwarf';
+            $age = 'an older dwarf';
             return $age;
         break;
 
         default:
-        $age = 'elderly dwarf';
+        $age = '';
         return $age;
     }
 
@@ -76,22 +76,22 @@ function elfAge($category)
     switch($category)
     {
         case 1:
-            $age = 'elven youth';
+            $age = 'an elven youth';
             return $age;
         break;
         
         case 2:
-            $age = 'adult elf';
+            $age = 'an dult elf';
             return $age;
         break;
         
         case 3:
-            $age = 'elf of indeterminate age';
+            $age = 'an elf of indeterminate age';
             return $age;
         break;
         
         case 4:
-            $age = 'elf of indeterminate age';
+            $age = 'an elf of indeterminate age';
             return $age;
         break;
 
@@ -109,22 +109,22 @@ function halflingAge($category)
     switch($category)
     {
         case 1:
-            $age = 'halfling youth';
+            $age = 'a halfling youth';
             return $age;
         break;
         
         case 2:
-            $age = 'adult halfling';
+            $age = 'an adult halfling';
             return $age;
         break;
         
         case 3:
-            $age = 'middle age halfling';
+            $age = 'a middle age halfling';
             return $age;
         break;
         
         case 4:
-            $age = 'older halfling';
+            $age = 'an older halfling';
             return $age;
         break;
 
@@ -190,13 +190,13 @@ function ageDescription($age, $species, $gender)
         if($gender == 'Male')
         { 
             $genderId = 'man';
-            $ageDesc = humanAge($age) . ' years old ' . $genderId;
+            $ageDesc = 'a ' . humanAge($age) . ' year old ' . $genderId;
             return $ageDesc;
         }
         else
         {
             $genderId = 'woman';
-            $ageDesc = humanAge($age) . ' years old ' . $genderId;
+            $ageDesc = 'a ' . humanAge($age) . ' year old ' . $genderId;
             return $ageDesc;
         }
     }
