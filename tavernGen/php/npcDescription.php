@@ -282,6 +282,155 @@ function humanFaceFemale($age)
 
 
 
+function dwarfFemale($age)
+{
+    
+    $hair = array('sandy blond', 'dirty blond', 'black', 'dark brown', 'auburn');
+    $hairSelect = rand(0, (count($hair)-1) );
+
+    $bodyPart = arraY('Left cheek', 'right cheek', 'forehead', 'nose', 'chin');
+    $bodyPartSelect = rand(0, (count($bodyPart)-1) );
+
+    $feature = array('birthmark', 'scar', 'wort');
+    $featureSelect = rand(0, (count($feature)-1) );
+
+    $eyes = array('dark brown', 'bright blue', 'green', 'grey', 'hazel');
+    $eyesSelect = rand(0, (count($eyes)-1) );
+
+    $expression = array('determined', 'dour', 'gruff');
+    $expressionSelect = rand(0, (count($expression)-1) );
+
+
+    if($age >= 1 && $age <= 3)
+    {
+        $choice = rand(0, 3);
+        
+        switch($choice)
+        {
+            case 0:
+                return ' with long braided ' . $hair[$hairSelect] .  ' hair and a ' . $expression[$expressionSelect] . ' look in her ' .  $eyes[$eyesSelect] . ' eyes.';
+            break;
+            
+            case 1:
+                return ' with long braided ' . $hair[$hairSelect] . ' hair and a kindhearted look in her ' .  $eyes[$eyesSelect] . ' eyes.';
+            break;
+            
+            case 2:
+                return ' with shoulder length ' . $hair[$hairSelect] . ' hair and a noticeable ' .  $feature[$featureSelect] . ' on her ' . $bodyPart[$bodyPartSelect] . '.';
+            break;
+            
+            case 3:
+                return ' with a head full of curly '. $hair[$hairSelect] .  ' hair and ' .  $eyes[$eyesSelect] . ' eyes.';
+            break;
+
+            default:
+            return '';
+        }
+    }
+    
+    if($age == 4)
+    {
+        $choice = rand(0, 2);
+
+        switch($choice)
+        {
+            case 0:
+                return ' with long grey hair tied back in a ponytail and ' .  $eyes[$eyesSelect] . ' eyes.';
+            break;
+            
+            case 1:
+                return ' with thick white hair tied up in a bun, a weather worn face and a noticeable ' .  $feature[$featureSelect] . ' on her ' . $bodyPart[$bodyPartSelect] . '.';
+            break;
+            
+            case 2:
+                return ' with salt and pepper coloured hair and a motherly look in her'  .  $eyes[$eyesSelect] . ' eyes.';
+            break;
+
+            default:
+            return '';
+        }
+    }
+}
+
+
+
+
+function dwarfMale($age)
+{
+    
+    $hair = array('sandy blond', 'dirty blond', 'black', 'dark brown', 'auburn');
+    $hairSelect = rand(0, (count($hair)-1) );
+
+    $bodyPart = arraY('Left cheek', 'right cheek', 'forehead', 'nose', 'chin');
+    $bodyPartSelect = rand(0, (count($bodyPart)-1) );
+
+    $feature = array('birthmark', 'scar', 'wort');
+    $featureSelect = rand(0, (count($feature)-1) );
+
+    $eyes = array('dark brown', 'bright blue', 'green', 'grey', 'hazel');
+    $eyesSelect = rand(0, (count($eyes)-1) );
+
+    $expression = array('determined', 'dour', 'gruff');
+    $expressionSelect = rand(0, (count($expression)-1) );
+
+    $beard = array('long', 'shaggy', 'matted upkept', 'braided', 'well groomed');
+    $beardSelect = rand(0, (count($beard)-1) );
+
+    if($age >= 1 && $age <= 3)
+    {
+        $choice = rand(0, 3);
+        
+        switch($choice)
+        {
+            case 0:
+                return ' with a receding hairline and a ' . $beard[$beardSelect] . ' beard of ' . $hair[$hairSelect] . ' hair.';
+            break;
+            
+            case 1:
+                return ' with a ' . $beard[$beardSelect] . ' beard of ' . $hair[$hairSelect] . ' hair and ' . $eyes[$eyesSelect] . ' eyes.';
+            break;
+            
+            case 2:
+                return ' with a ' . $beard[$beardSelect] . ' beard of ' . $hair[$hairSelect] . ' hair and a noticeable ' .  $feature[$featureSelect] . ' on his ' . $bodyPart[$bodyPartSelect] . '.';
+            break;
+            
+            case 3:
+                return ' with a ' . $beard[$beardSelect] . ' beard of ' . $hair[$hairSelect] . 'and a ' . $expression[$expressionSelect] . ' look in his ' .  $eyes[$eyesSelect] . ' eyes.';
+            break;
+
+            default:
+            return '';
+        }
+    }
+    
+    if($age == 4)
+    {
+        $choice = rand(0, 2);
+
+        switch($choice)
+        {
+            case 0:
+                return ' with a ' . $beard[$beardSelect] . ' white beard, bushy eyebrows and a ' . $expression[$expressionSelect] . ' look in his ' .  $eyes[$eyesSelect] . ' eyes.';
+            break;
+            
+            case 1:
+                return ' with a ' . $beard[$beardSelect] . ' grey beard, ' .  $eyes[$eyesSelect] . ' eyes, and a noticeable '  .  $feature[$featureSelect] . ' on his ' . $bodyPart[$bodyPartSelect] . '.';
+            break;
+            
+            case 2:
+                return ' with a receding hairline and a ' . $expression[$expressionSelect] . ' look in his ' .  $eyes[$eyesSelect] . ' eyes.';
+            break;
+
+            default:
+            return '';
+        }
+    }
+}
+
+
+
+
+
 function elfHair()
 {
     $choice = rand(0,5);
@@ -352,6 +501,78 @@ function elfEyes()
         return '';
     }
 }
+
+
+
+
+function halflingDescription($age)
+{
+    
+    $hair = array('sandy blond', 'dirty blond', 'black', 'dark brown', 'auburn');
+    $hairSelect = rand(0, (count($hair)-1) );
+
+    $bodyPart = arraY('Left cheek', 'right cheek', 'forehead', 'nose', 'chin');
+    $bodyPartSelect = rand(0, (count($bodyPart)-1) );
+
+    $feature = array('birthmark', 'scar', 'wort');
+    $featureSelect = rand(0, (count($feature)-1) );
+
+    $eyes = array('dark brown', 'bright blue', 'green', 'grey', 'hazel');
+    $eyesSelect = rand(0, (count($eyes)-1) );
+
+
+    if($age >= 1 && $age <= 3)
+    {
+        $choice = rand(0, 3);
+        
+        switch($choice)
+        {
+            case 0:
+                return ' with a head full of curly '. $hair[$hairSelect] . ' hair and ' . $eyes[$eyesSelect] . ' eyes.';
+            break;
+            
+            case 1:
+                return ' with a pump belly, a cheerful smile and wavy ' . $hair[$hairSelect] . 'hair.';
+            break;
+            
+            case 2:
+                return ' with a silly grin, round cheeks and mischievous ' . $eyes[$eyesSelect] . ' eyes.';
+            break;
+            
+            case 3:
+                return ' ';
+            break;
+
+            default:
+            return '';
+        }
+    }
+    
+    if($age == 4)
+    {
+        $choice = rand(0, 2);
+
+        switch($choice)
+        {
+            case 0:
+                return ' ';
+            break;
+            
+            case 1:
+                return ' ';
+            break;
+            
+            case 2:
+                return ' ';
+            break;
+
+            default:
+            return '';
+        }
+    }
+}
+
+
 
 
 
