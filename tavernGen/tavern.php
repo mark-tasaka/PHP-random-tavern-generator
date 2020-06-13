@@ -58,6 +58,7 @@ $innkeeperHP = innKeeperHitPoints($ruleSet);
 $innkeeperStat = statLine ($ruleSet, $innkeeperStats, $innkeeperHP);
 $innkeeperAge = npcAgeCategory();
 $innkeeperAgeCat = ageDescription($innkeeperAge, $innkeeperSpecies, $innkeeperGender);
+$innkeeperDesc = physicalDescription ($innkeeperSpecies, $innkeeperGender, $innkeeperAge);
 
 $bartenderGender = getRandomSex1();
 $bartenderSpecies = getSpecies();
@@ -67,6 +68,7 @@ $bartenderHP = innKeeperHitPoints($ruleSet);
 $bartenderStat = statLine ($ruleSet, $bartenderStats, $bartenderHP);
 $bartenderAge = npcAgeCategory();
 $bartenderAgeCat = ageDescription($bartenderAge, $bartenderSpecies, $bartenderGender);
+$bartenderDesc = physicalDescription ($bartenderSpecies, $bartenderGender, $bartenderAge);
 
 
 
@@ -85,11 +87,11 @@ $bartenderAgeCat = ageDescription($bartenderAge, $bartenderSpecies, $bartenderGe
            echo '<br/><br/><span class="bold">Tavern Staff: </span>';
            echo '<br/><br/><span class="bold">Innkeeper: </span>' . $innkeeperName . " (" . $innkeeperSpecies . ' ' . $innkeeperGender . ')';
            echo '<br/>' . $innkeeperStat;
-           echo '<br/>' . $innkeeperName . ' is '. $innkeeperAgeCat;
+           echo '<br/>' . $innkeeperName . ' is '. $innkeeperAgeCat . ' ' . $innkeeperDesc;
 
            echo '<br/><br/><span class="bold">Bartender: </span>' . $bartenderName . " (" . $bartenderSpecies . ' ' . $bartenderGender . ')';
            echo '<br/>' . $bartenderStat;
-           echo '<br/>' . $bartenderName . ' is '. $bartenderAgeCat;
+           echo '<br/>' . $bartenderName . ' is '. $bartenderAgeCat . ' ' . $bartenderDesc;
            ?>
        </span>
        

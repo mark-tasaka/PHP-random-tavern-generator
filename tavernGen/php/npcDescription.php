@@ -137,7 +137,7 @@ function humanFaceMale($age)
     $hair = array('sandy blond', 'dirty blond', 'black', 'dark brown', 'auburn');
     $hairSelect = rand(0, (count($hair)-1) );
 
-    $bodyPart = arraY('Left cheek', 'right cheek', 'forehead', 'nose', 'chin');
+    $bodyPart = arraY('left cheek', 'right cheek', 'forehead', 'nose', 'chin');
     $bodyPartSelect = rand(0, (count($bodyPart)-1) );
 
     $feature = array('birthmark', 'scar', 'wort');
@@ -212,7 +212,7 @@ function humanFaceFemale($age)
     $hair = array('sandy blond', 'dirty blond', 'black', 'dark brown', 'auburn');
     $hairSelect = rand(0, (count($hair)-1) );
 
-    $bodyPart = arraY('Left cheek', 'right cheek', 'forehead', 'nose', 'chin');
+    $bodyPart = arraY('left cheek', 'right cheek', 'forehead', 'nose', 'chin');
     $bodyPartSelect = rand(0, (count($bodyPart)-1) );
 
     $feature = array('birthmark', 'scar', 'wort');
@@ -288,7 +288,7 @@ function dwarfFemale($age)
     $hair = array('sandy blond', 'dirty blond', 'black', 'dark brown', 'auburn');
     $hairSelect = rand(0, (count($hair)-1) );
 
-    $bodyPart = arraY('Left cheek', 'right cheek', 'forehead', 'nose', 'chin');
+    $bodyPart = arraY('left cheek', 'right cheek', 'forehead', 'nose', 'chin');
     $bodyPartSelect = rand(0, (count($bodyPart)-1) );
 
     $feature = array('birthmark', 'scar', 'wort');
@@ -361,7 +361,7 @@ function dwarfMale($age)
     $hair = array('sandy blond', 'dirty blond', 'black', 'dark brown', 'auburn');
     $hairSelect = rand(0, (count($hair)-1) );
 
-    $bodyPart = arraY('Left cheek', 'right cheek', 'forehead', 'nose', 'chin');
+    $bodyPart = arraY('left cheek', 'right cheek', 'forehead', 'nose', 'chin');
     $bodyPartSelect = rand(0, (count($bodyPart)-1) );
 
     $feature = array('birthmark', 'scar', 'wort');
@@ -511,7 +511,7 @@ function halflingDescription($age)
     $hair = array('sandy blond', 'dirty blond', 'black', 'dark brown', 'auburn');
     $hairSelect = rand(0, (count($hair)-1) );
 
-    $bodyPart = arraY('Left cheek', 'right cheek', 'forehead', 'nose', 'chin');
+    $bodyPart = arraY('left cheek', 'right cheek', 'forehead', 'nose', 'chin');
     $bodyPartSelect = rand(0, (count($bodyPart)-1) );
 
     $feature = array('birthmark', 'scar', 'wort');
@@ -540,7 +540,7 @@ function halflingDescription($age)
             break;
             
             case 3:
-                return ' ';
+                return ', with a round belly, curly '. $hair[$hairSelect] . ' hair and ' . $eyes[$eyesSelect] . ' eyes.';
             break;
 
             default:
@@ -555,15 +555,15 @@ function halflingDescription($age)
         switch($choice)
         {
             case 0:
-                return ' ';
+                return ', with a wizen face, curly silver-grey hair and ' . $eyes[$eyesSelect] . ' eyes.';
             break;
             
             case 1:
-                return ' ';
+                return ', with deep ' . $eyes[$eyesSelect] . ' eyes, a round belly and wavy grey hair.';
             break;
             
             case 2:
-                return ' ';
+                return ', with curly dark brown hair, greying around the temples and weather worn ' . $eyes[$eyesSelect] . ' eyes.';
             break;
 
             default:
@@ -572,6 +572,61 @@ function halflingDescription($age)
     }
 }
 
+
+function physicalDescription ($species, $gender, $age)
+{
+    if($species == 'Human')
+    {
+        if($gender == 'Male')
+        {
+            $build = humanBuildMale($age);
+            $face = humanFaceMale($age);
+
+            return ' with ' . $build . $face;
+        }
+        
+        if($gender == 'Female')
+        {
+            $build = humanBuildFemale($age);
+            $face = humanFaceFemale($age);
+
+            return ' with ' . $build . $face;
+        }
+    }
+    
+    if($species == 'Dwarf')
+    {
+        if($gender == 'Male')
+        {
+            $maleDwarf = dwarfMale($age);
+
+            return $maleDwarf;
+        }
+        
+        if($gender == 'Female')
+        {
+            $femaleDwarf = dwarfFemale($age);
+
+            return $femaleDwarf;
+        }
+    }
+    
+    if($species == 'Elf')
+    {
+        $hair = elfHair();
+        $eyes = elfEyes();
+
+        return $hair . ' and ' . $eyes;
+    }
+
+    if($species == 'Halfling')
+    {
+        $halflingDesc = halflingDescription($age);
+
+        return $halflingDesc;
+    }
+
+}
 
 
 
