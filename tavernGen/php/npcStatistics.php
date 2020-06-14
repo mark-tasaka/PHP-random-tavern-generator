@@ -32,6 +32,38 @@ function innKeeperStats($ruleSet)
 }
 
 
+function supportStaffStats($ruleSet)
+{
+    switch($ruleSet)
+    {
+        case 0:
+            $stats = array('', 'Init +0; Atk +0 melee (by weapon); AC 9; HD 1d6; ', ' MV 20; Act 1d20; SV Fort +0, Ref +0, Will -1; AL ');
+            return $stats;
+        break;
+        
+        case 1:
+            $stats = array('AL ', '; MV 120 (40); AC 9; hp 1d6; ', ' Att 1; Dmg: by weapon; Save 0th level human');
+            return $stats;
+        break;
+        
+        case 2:
+            $stats = array('', 'AC 11; hp 1d6; ', ' No Att 1; Dmg: by weapon; MV 30; Save as NM');
+            return $stats;
+        break;
+        
+        case 3:
+            $stats = array('', 'AC 9 [10]; HD 1-1; ', ' Attack: by weapon; MV 12');
+            return $stats;
+        break;
+
+        default:
+            $stats = array('', '', '');
+            return $stats;
+    }
+
+}
+
+
 function innKeeperHitPoints($ruleSet)
 {
     switch($ruleSet)
@@ -53,6 +85,38 @@ function innKeeperHitPoints($ruleSet)
         
         case 3:
             $hp = rand(4, 6);
+            return $hp;
+        break;
+
+        default:
+            $hp = 0;
+            return $hp;
+    }
+
+}
+
+
+function supportStaffHitPoints($ruleSet)
+{
+    switch($ruleSet)
+    {
+        case 0:
+            $hp = rand(3, 6);
+            return $hp;
+        break;
+        
+        case 1:
+            $hp = rand(3, 6);
+            return $hp;
+        break;
+        
+        case 2:
+            $hp = rand(3, 6);
+            return $hp;
+        break;
+        
+        case 3:
+            $hp = rand(3, 5);
             return $hp;
         break;
 

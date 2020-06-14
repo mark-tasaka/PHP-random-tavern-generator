@@ -56,4 +56,17 @@ function getGenderPronoun($sex)
 
 }
 
+
+function barmaidGenderTitle($gender)
+{
+    if($gender == 'Female')
+    {
+        return 'Barmaid: ';
+    }
+    else
+    {
+        return 'Barman: ';
+    }
+}
+
 ?>

@@ -50,6 +50,7 @@ $tavernStoreys = tavernStorey($storeys);
 $acoommadations1 = accommodationDescr1();
 $acoommadations2 = accommodationDescr2();
 
+//Inn Keeper
 $innkeeperGender = getRandomSex1();
 $innkeeperSpecies = getSpecies();
 $innkeeperName = getFirstName ($innkeeperGender, $innkeeperSpecies) . ' ' . getSurnameName ($innkeeperSpecies);
@@ -60,6 +61,7 @@ $innkeeperAge = npcAgeCategory();
 $innkeeperAgeCat = ageDescription($innkeeperAge, $innkeeperSpecies, $innkeeperGender);
 $innkeeperDesc = physicalDescription ($innkeeperSpecies, $innkeeperGender, $innkeeperAge);
 
+//Bartender
 $bartenderGender = getRandomSex1();
 $bartenderSpecies = getSpecies();
 $bartenderName = getFirstName ($bartenderGender, $bartenderSpecies) . ' ' . getSurnameName ($bartenderSpecies);
@@ -69,6 +71,18 @@ $bartenderStat = statLine ($ruleSet, $bartenderStats, $bartenderHP);
 $bartenderAge = npcAgeCategory();
 $bartenderAgeCat = ageDescription($bartenderAge, $bartenderSpecies, $bartenderGender);
 $bartenderDesc = physicalDescription ($bartenderSpecies, $bartenderGender, $bartenderAge);
+
+//Barmaid #1
+$barmaidGender1 = getRandomSex2();
+$barmaidTitle1 = barmaidGenderTitle($barmaidGender1);
+$barmaidSpecies1 = getSpecies();
+$barmaidName1 = getFirstName ($barmaidGender1, $barmaidSpecies1) . ' ' . getSurnameName ($barmaidSpecies1);
+$barmaidStats1 = supportStaffStats($ruleSet);
+$barmaidHP1 = supportStaffHitPoints($ruleSet);
+$barmaidStat1 = statLine ($ruleSet, $barmaidStats1, $barmaidHP1);
+$barmaidAge1 = npcAgeCategory();
+$barmaidAgeCat1 = ageDescription($barmaidAge1, $barmaidSpecies1, $barmaidGender1);
+$barmaidDesc1 = physicalDescription ($barmaidSpecies1, $barmaidGender1, $barmaidAge1);
 
 
 
@@ -84,7 +98,9 @@ $bartenderDesc = physicalDescription ($bartenderSpecies, $bartenderGender, $bart
            <?php
            echo $tavernName . ' is a ' . $storeys . ' ' . $outerWalls . ', with ' . $theFloor . ' and ' . $theRoof . '. ' . $innerDescr1 . ' and ' . $innerDescr2;
            echo 'The accommodations on the ' . $tavernStoreys . ' consists of ' . $acoommadations1 . $acoommadations2;
+
            echo '<br/><br/><span class="bold">Tavern Staff: </span>';
+
            echo '<br/><br/><span class="bold">Innkeeper: </span>' . $innkeeperName . " (" . $innkeeperSpecies . ' ' . $innkeeperGender . ')';
            echo '<br/>' . $innkeeperStat;
            echo '<br/>' . $innkeeperName . ' is '. $innkeeperAgeCat . ' ' . $innkeeperDesc;
@@ -92,6 +108,13 @@ $bartenderDesc = physicalDescription ($bartenderSpecies, $bartenderGender, $bart
            echo '<br/><br/><span class="bold">Bartender: </span>' . $bartenderName . " (" . $bartenderSpecies . ' ' . $bartenderGender . ')';
            echo '<br/>' . $bartenderStat;
            echo '<br/>' . $bartenderName . ' is '. $bartenderAgeCat . ' ' . $bartenderDesc;
+ 
+           echo '<br/><br/><span class="bold">' . $barmaidTitle1 . '</span>' . $barmaidName1 . " (" . $barmaidSpecies1 . ' ' . $barmaidGender1 . ')';
+           echo '<br/>' . $barmaidStat1;
+           echo '<br/>' . $barmaidName1 . ' is '. $barmaidAgeCat1 . ' ' . $barmaidDesc1;
+
+
+
            ?>
        </span>
        
