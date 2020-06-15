@@ -84,6 +84,51 @@ $barmaidAge1 = npcAgeCategory();
 $barmaidAgeCat1 = ageDescription($barmaidAge1, $barmaidSpecies1, $barmaidGender1);
 $barmaidDesc1 = physicalDescription ($barmaidSpecies1, $barmaidGender1, $barmaidAge1);
 
+//Barmaid #2
+$barmaidGender2 = getRandomSex2();
+$barmaidTitle2 = barmaidGenderTitle($barmaidGender2);
+$barmaidSpecies2 = getSpecies();
+$barmaidName2 = getFirstName ($barmaidGender2, $barmaidSpecies2) . ' ' . getSurnameName ($barmaidSpecies2);
+$barmaidStats2 = supportStaffStats($ruleSet);
+$barmaidHP2 = supportStaffHitPoints($ruleSet);
+$barmaidStat2 = statLine ($ruleSet, $barmaidStats2, $barmaidHP2);
+$barmaidAge2 = npcAgeCategory();
+$barmaidAgeCat2 = ageDescription($barmaidAge2, $barmaidSpecies2, $barmaidGender2);
+$barmaidDesc2 = physicalDescription ($barmaidSpecies2, $barmaidGender2, $barmaidAge2);
+
+//Barmaid #3
+$barmaidGender3 = getRandomSex2();
+$barmaidTitle3 = barmaidGenderTitle($barmaidGender3);
+$barmaidSpecies3 = getSpecies();
+$barmaidName3 = getFirstName ($barmaidGender3, $barmaidSpecies3) . ' ' . getSurnameName ($barmaidSpecies3);
+$barmaidStats3 = supportStaffStats($ruleSet);
+$barmaidHP3 = supportStaffHitPoints($ruleSet);
+$barmaidStat3 = statLine ($ruleSet, $barmaidStats3, $barmaidHP3);
+$barmaidAge3 = npcAgeCategory();
+$barmaidAgeCat3 = ageDescription($barmaidAge3, $barmaidSpecies3, $barmaidGender3);
+$barmaidDesc3 = physicalDescription ($barmaidSpecies3, $barmaidGender3, $barmaidAge3);
+
+//Cook
+$cookGender = getRandomSex1();
+$cookSpecies = getSpecies();
+$cookName = getFirstName ($cookGender, $cookSpecies) . ' ' . getSurnameName ($cookSpecies);
+$cookStats = supportStaffStats($ruleSet);
+$cookHP = supportStaffHitPoints($ruleSet);
+$cookStat = statLine ($ruleSet, $cookStats, $cookHP);
+$cookAge = npcAgeCategory();
+$cookAgeCat = ageDescription($cookAge, $cookSpecies, $cookGender);
+$cookDesc = physicalDescription ($cookSpecies, $cookGender, $cookAge);
+
+//Cook's Helper
+$cookGender1 = getRandomSex1();
+$cookSpecies1 = getSpecies();
+$cookName1 = getFirstName ($cookGender1, $cookSpecies1) . ' ' . getSurnameName ($cookSpecies1);
+$cookStats1 = supportStaffStats($ruleSet);
+$cookHP1 = supportStaffHitPoints($ruleSet);
+$cookStat1 = statLine ($ruleSet, $cookStats1, $cookHP1);
+$cookAge1 = npcAgeCategory();
+$cookAgeCat1 = ageDescription($cookAge1, $cookSpecies1, $cookGender1);
+$cookDesc1 = physicalDescription ($cookSpecies1, $cookGender1, $cookAge1);
 
 
 ?>
@@ -112,6 +157,25 @@ $barmaidDesc1 = physicalDescription ($barmaidSpecies1, $barmaidGender1, $barmaid
            echo '<br/><br/><span class="bold">' . $barmaidTitle1 . '</span>' . $barmaidName1 . " (" . $barmaidSpecies1 . ' ' . $barmaidGender1 . ')';
            echo '<br/>' . $barmaidStat1;
            echo '<br/>' . $barmaidName1 . ' is '. $barmaidAgeCat1 . ' ' . $barmaidDesc1;
+           
+ 
+           echo '<br/><br/><span class="bold">' . $barmaidTitle2 . '</span>' . $barmaidName2 . " (" . $barmaidSpecies2 . ' ' . $barmaidGender2 . ')';
+           echo '<br/>' . $barmaidStat2;
+           echo '<br/>' . $barmaidName2 . ' is '. $barmaidAgeCat2 . ' ' . $barmaidDesc2;
+ 
+           echo '<br/><br/><span class="bold">' . $barmaidTitle3 . '</span>' . $barmaidName3 . " (" . $barmaidSpecies3 . ' ' . $barmaidGender3 . ')';
+           echo '<br/>' . $barmaidStat3;
+           echo '<br/>' . $barmaidName3 . ' is '. $barmaidAgeCat3 . ' ' . $barmaidDesc3;
+           
+
+           echo '<br/><br/><span class="bold">Cook: </span>' . $cookName . " (" . $cookSpecies . ' ' . $cookGender . ')';
+           echo '<br/>' . $cookStat;
+           echo '<br/>' . $cookName . ' is '. $cookAgeCat . ' ' . $cookDesc;
+           
+
+           echo '<br/><br/><span class="bold">Cooks Helper: </span>' . $cookName1 . " (" . $cookSpecies1 . ' ' . $cookGender1 . ')';
+           echo '<br/>' . $cookStat1;
+           echo '<br/>' . $cookName1 . ' is '. $cookAgeCat1 . ' ' . $cookDesc1;
 
 
 
