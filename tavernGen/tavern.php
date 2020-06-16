@@ -27,6 +27,7 @@ include 'php/species.php';
 include 'php/npcStatistics.php';
 include 'php/npcDescription.php';
 include 'php/npcAge.php';
+include 'php/tavernMenu.php';
 
 
 
