@@ -145,7 +145,13 @@ $cookDesc1 = physicalDescription ($cookSpecies1, $cookGender1, $cookAge1);
            echo $tavernName . ' is a ' . $storeys . ' ' . $outerWalls . ', with ' . $theFloor . ' and ' . $theRoof . '. ' . $innerDescr1 . ' and ' . $innerDescr2;
            echo 'The accommodations on the ' . $tavernStoreys . ' consists of ' . $acoommadations1 . $acoommadations2;
 
-           echo '<br/><br/><span class="bold">Tavern Staff: </span>';
+           
+           echo '<br/><br/><span class="bold">Tavern Menu: </span>';
+           echo '<br/><br/><table ><tr><td class="menu">House Ale</td>' . '<td><span class="price">2 cp</span></td></tr>';
+
+           echo '</table>';
+
+           echo '<br/><span class="bold">Tavern Staff: </span>';
 
            echo '<br/><br/><span class="bold">Innkeeper: </span>' . $innkeeperName . " (" . $innkeeperSpecies . ' ' . $innkeeperGender . ')';
            echo '<br/>' . $innkeeperStat;
@@ -174,7 +180,7 @@ $cookDesc1 = physicalDescription ($cookSpecies1, $cookGender1, $cookAge1);
            echo '<br/>' . $cookName . ' is '. $cookAgeCat . ' ' . $cookDesc;
            
 
-           echo '<br/><br/><span class="bold">Cooks Helper: </span>' . $cookName1 . " (" . $cookSpecies1 . ' ' . $cookGender1 . ')';
+           echo '<br/><br/><span class="bold">Cook\' s Helper: </span>' . $cookName1 . " (" . $cookSpecies1 . ' ' . $cookGender1 . ')';
            echo '<br/>' . $cookStat1;
            echo '<br/>' . $cookName1 . ' is '. $cookAgeCat1 . ' ' . $cookDesc1;
 
