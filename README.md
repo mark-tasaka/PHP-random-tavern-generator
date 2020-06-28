@@ -1,6 +1,8 @@
 # PHP-random-tavern-generator
 Designed primarily with PHP, the PHP-random-tavern-generator is used to create randomly generated taverns for various Old School Revival (OSR) role-playing systems.  These RPG systems includes Dungeon Crawl Classics, White Box RPG, Basic Fantasy RPG and Labyrinth Lord.  On the Generator’s Launch Page, the user has options for selecting which role-playing system the randomly generated Tavern is tailored for.  The options are sent, via POST requests, and are used as input values for the parameters of the various functions.  Whenever possible, separate PHP files have been created, comprised of related functions.  This has been done to achieve high cohesion and low coupling, a key principle in object-oriented design.  
 
+Update 1.20 (June 27, 2020): Misc folder added, which contains a custom art piece of a bartender.
+
 Update 1.19 (June 21, 2020): Updates to existing code.
 
 Update 1.18 (June 15, 2020): A new file, tavernMenu.php, added.
